@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 12:31:31 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/15 18:55:39 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/18 16:07:57 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ static int	ft_start(char const *s1, char const *set)
 	i = 0;
 	while (s1[i] && boolean == 'T')
 	{
+		boolean = 'F';
 		j = 0;
 		while (set[j])
 		{
@@ -33,7 +34,6 @@ static int	ft_start(char const *s1, char const *set)
 				boolean = 'T';
 				break ;
 			}
-			boolean = 'F';
 			j++;
 		}
 		i++;
@@ -53,6 +53,7 @@ static int	ft_end(char const *s1, char const *set)
 	i = ft_strlen(s1) - 1;
 	while (i > 0 && boolean == 'T')
 	{
+		boolean = 'F';
 		j = 0;
 		while (set[j])
 		{
@@ -62,7 +63,6 @@ static int	ft_end(char const *s1, char const *set)
 				boolean = 'T';
 				break ;
 			}
-			boolean = 'F';
 			j++;
 		}
 		i--;

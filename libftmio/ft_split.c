@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 13:58:41 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/15 19:04:32 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/18 16:20:15 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,14 @@ static size_t	ft_wordcount(const char *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		if (s[i] != c)
-			count++;
-		while (s[i] != c && s[i + 1])
+		if (s[i] == c)
+		{
 			i++;
-		i++;
+			continue ;
+		}
+		count++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
 	return (count);
 }
