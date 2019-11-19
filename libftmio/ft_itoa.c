@@ -6,13 +6,13 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 16:47:11 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/12 18:29:00 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/19 14:50:54 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_len(long nb)
+static int		ft_len(long nb)
 {
 	int		len;
 
@@ -32,7 +32,7 @@ int		ft_len(long nb)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*str;
 	long	nb;
