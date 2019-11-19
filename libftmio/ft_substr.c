@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 10:39:15 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/18 15:42:38 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/19 17:48:38 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,12 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*substr;
-	unsigned int	i;
+	char	*substr;
 
-	i = 0;
-	if (!s || !(substr = (char *)malloc(sizeof(char) * len + 1)))
+	if (!s || !(substr = (char *)malloc(sizeof(char) * ((int)len + 1))))
 		return (NULL);
-	while (i < len && ft_strlen(s) > start)
-	{
-		substr[i] = s[i + start];
-		i++;
-	}
-	substr[i] = '\0';
+	ft_bzero(substr, len);
+	if (start <= ft_strlen(s))
+		ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }

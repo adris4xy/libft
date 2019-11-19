@@ -6,52 +6,47 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 12:31:31 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/18 16:07:57 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/19 17:58:02 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_start(char const *s1, char const *set)
+static int		ft_start(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
-	int		count;
 	char	boolean;
 
+	i = -1;
 	boolean = 'T';
-	count = 0;
-	i = 0;
-	while (s1[i] && boolean == 'T')
+	while (boolean == 'T')
 	{
 		boolean = 'F';
-		j = 0;
-		while (set[j])
-		{
-			if (s1[i] == set[j])
-			{
-				count++;
-				boolean = 'T';
-				break ;
-			}
-			j++;
-		}
 		i++;
+		j = 0;
+		while (set[j])
+		{
+			if (s1[i] == set[j])
+				boolean = 'T';
+			j++;
+		}
 	}
-	return (count);
+	return (i);
 }
 
-static int	ft_end(char const *s1, char const *set)
+static int		ft_end(char const *s1, char const *set, int start)
 {
 	int		i;
 	int		j;
-	int		count;
 	char	boolean;
 
+	i = 0;
+	while (s1[i])
+		i++;
+	i = i == 0 ? 0 : i - 1;
 	boolean = 'T';
-	count = 0;
-	i = ft_strlen(s1) - 1;
-	while (i > 0 && boolean == 'T')
+	while (start < i && boolean == 'T')
 	{
 		boolean = 'F';
 		j = 0;
@@ -59,40 +54,52 @@ static int	ft_end(char const *s1, char const *set)
 		{
 			if (s1[i] == set[j])
 			{
-				count++;
+				i--;
 				boolean = 'T';
-				break ;
 			}
 			j++;
 		}
-		i--;
 	}
-	return (count);
+	return (i);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+static char		*ft_trim(char const *s1, int start, int end)
 {
-	char	*s2;
-	size_t	start;
-	size_t	end;
-	size_t	i;
-	size_t	size;
+	char	*trimmed;
+	int		i;
+	int		j;
 
-	i = 0;
+	if (!(trimmed = malloc(sizeof(char) * (end - start + 2))))
+		return (NULL);
+	i = start;
+	j = 0;
+	while (i <= end)
+	{
+		trimmed[j] = s1[i];
+		i++;
+		j++;
+	}
+	trimmed[j] = '\0';
+	return (trimmed);
+}
+
+char			*ft_strtrim(char const *s1, char const *set)
+{
+	int		start;
+	int		end;
+	char	*trimmed;
+
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	if (s1[0] == '\0')
-		return (ft_strdup(""));
+	{
+		if (!(trimmed = malloc(sizeof(char) * 1)))
+			return (NULL);
+		trimmed[0] = '\0';
+		return (trimmed);
+	}
 	start = ft_start(s1, set);
-	end = ft_end(s1, set);
-	if (start == ft_strlen(s1))
-		return (ft_strdup(""));
-	else if ((s2 = (char*)malloc((ft_strlen(s1)
-	- start - end + 1) * sizeof(char))) == 0)
-		return (NULL);
-	size = ft_strlen(s1) - end;
-	while (start < size)
-		s2[i++] = s1[start++];
-	s2[i] = '\0';
-	return (s2);
+	end = ft_end(s1, set, start);
+	trimmed = ft_trim(s1, start, end);
+	return (trimmed);
 }

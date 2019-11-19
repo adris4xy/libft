@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 12:21:09 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/14 11:50:07 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/19 17:22:02 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,18 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	c;
+	unsigned int	av;
+	char			toprint;
 
-	if (n == -2147483648)
-		return (ft_putstr_fd("-2147483648", fd));
 	if (n < 0)
 	{
-		n = n * -1;
-		ft_putchar_fd('-', fd);
-	}
-	if (n < 10)
-	{
-		c = n + '0';
-		ft_putchar_fd(c, fd);
+		write(fd, "-", 1);
+		av = n * (-1);
 	}
 	else
-	{
-		ft_putnbr_fd((n / 10), fd);
-		ft_putnbr_fd((n % 10), fd);
-	}
+		av = n;
+	if (av / 10 != 0)
+		ft_putnbr_fd(av / 10, fd);
+	toprint = (av % 10) + 48;
+	write(fd, &toprint, 1);
 }
