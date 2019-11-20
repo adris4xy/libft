@@ -6,55 +6,35 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 16:47:11 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/19 14:42:22 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/20 18:13:52 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_len(long nb)
+char	*ft_itoa(int n)
 {
-	int		len;
-
-	if (nb == 0)
-		return (1);
-	len = 0;
-	if (nb < 0)
-	{
-		nb = nb * -1;
-		len++;
-	}
-	while (nb > 0)
-	{
-		nb = nb / 10;
-		len++;
-	}
-	return (len);
-}
-
-char			*ft_itoa(int n)
-{
+	long	nbr;
+	size_t	len;
 	char	*str;
-	long	nb;
-	int		i;
 
-	nb = n;
-	i = ft_len(nb);
-	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
+	nbr = n;
+	len = (nbr > 0) ? 0 : 1;
+	nbr = (nbr > 0) ? nbr : -nbr;
+	while (n)
+		n = len++ ? n / 10 : n / 10;
+	str = (char *)malloc(sizeof(str) * len + 1);
+	if (!str)
 		return (NULL);
-	str[i--] = '\0';
-	if (nb == 0)
-		return ("0");
-	if (nb < 0)
+	*(str + len--) = '\0';
+	while (nbr > 0)
 	{
-		str[0] = '-';
-		nb = nb * -1;
+		*(str + len--) = nbr % 10 + '0';
+		nbr /= 10;
 	}
-	while (nb > 0)
-	{
-		str[i] = 48 + (nb % 10);
-		nb = nb / 10;
-		i--;
-	}
+	if (len == 0 && str[1] == '\0')
+		*(str + len) = '0';
+	if (len == 0 && str[1] != '\0')
+		*(str + len) = '-';
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 11:24:57 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/14 11:50:21 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/20 17:59:51 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int		i;
+	int i;
 
-	i = 0;
-	if (s != NULL)
-		while (s[i] != 0)
-		{
-			ft_putchar_fd(s[i], fd);
-			i++;
-		}
+	if (s == NULL)
+		return ;
+	i = -1;
+	while (s[++i])
+		write(fd, &s[i], 1);
 }

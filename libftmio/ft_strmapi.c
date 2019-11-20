@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 11:16:17 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/19 17:41:04 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/20 18:09:24 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,12 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	if (!s)
+	if (s == NULL)
 		return (NULL);
-	if (!(str = (char *)malloc(sizeof(*s) * ft_strlen(s) + 1)))
+	i = 0;
+	while (s[i])
+		i++;
+	if (!(str = malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	ft_strcpy1(str, s);
 	i = 0;

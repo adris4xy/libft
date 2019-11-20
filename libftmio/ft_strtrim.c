@@ -6,13 +6,13 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 12:31:31 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/19 17:58:02 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/20 17:56:51 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_start(char const *s1, char const *set)
+static int		set_start(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
@@ -35,7 +35,7 @@ static int		ft_start(char const *s1, char const *set)
 	return (i);
 }
 
-static int		ft_end(char const *s1, char const *set, int start)
+static int		set_end(char const *s1, char const *set, int start)
 {
 	int		i;
 	int		j;
@@ -63,23 +63,23 @@ static int		ft_end(char const *s1, char const *set, int start)
 	return (i);
 }
 
-static char		*ft_trim(char const *s1, int start, int end)
+static char		*trim(char const *s1, int start, int end)
 {
 	char	*trimmed;
 	int		i;
-	int		j;
+	int		o;
 
 	if (!(trimmed = malloc(sizeof(char) * (end - start + 2))))
 		return (NULL);
 	i = start;
-	j = 0;
+	o = 0;
 	while (i <= end)
 	{
-		trimmed[j] = s1[i];
+		trimmed[o] = s1[i];
 		i++;
-		j++;
+		o++;
 	}
-	trimmed[j] = '\0';
+	trimmed[o] = '\0';
 	return (trimmed);
 }
 
@@ -98,8 +98,8 @@ char			*ft_strtrim(char const *s1, char const *set)
 		trimmed[0] = '\0';
 		return (trimmed);
 	}
-	start = ft_start(s1, set);
-	end = ft_end(s1, set, start);
-	trimmed = ft_trim(s1, start, end);
+	start = set_start(s1, set);
+	end = set_end(s1, set, start);
+	trimmed = trim(s1, start, end);
 	return (trimmed);
 }
