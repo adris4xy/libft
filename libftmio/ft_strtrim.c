@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 12:31:31 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/20 17:56:51 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/21 18:21:23 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,4 +102,9 @@ char			*ft_strtrim(char const *s1, char const *set)
 	end = set_end(s1, set, start);
 	trimmed = trim(s1, start, end);
 	return (trimmed);
+}
+
+int main()
+{
+	free(ft_strtrim("",""));
 }
