@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 10:39:15 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/21 11:38:49 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 17:02:46 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }
+//Reserva memoria con malloc para la string que va a devolver, y que proviene de la string '*s'.
+//Esta nueva cadena comienza en el índice ’start’ y tiene como tamaño máximo ’len’.
+//Devuelve la nueva string(substr). NULL si falla la reserva de memoria.

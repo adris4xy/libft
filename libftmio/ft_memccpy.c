@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aortega- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:47:23 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/06 15:00:05 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 15:14:36 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,6 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
+//Copia bytes de la cadena *src a la cadena *dst. Si el caracter 'c' (convertido a unsigned char) aparece
+//en la cadena *src, la copia se detiene y retorna un puntero de dst apuntando al caracter siguiente de 'c'.
+//Si no hay 'c', se copian 'n' bytes y se devuelve un puntero NULL.

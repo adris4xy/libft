@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aortega- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:50:21 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/06 14:58:24 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 15:28:48 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,4 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+//Escribe 'len' veces el caracter 'c' (convertido a unsigned char) en la string b.

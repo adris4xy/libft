@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:14:23 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/07 10:07:54 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 16:41:58 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,4 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
+//Devuelve el tamaño de la string.

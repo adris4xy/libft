@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 12:31:31 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/21 18:21:23 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 17:42:42 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static char		*trim(char const *s1, int start, int end)
 	int		i;
 	int		o;
 
-	if (!(trimmed = malloc(sizeof(char) * (end - start + 2))))
+	if (!(trimmed = malloc(sizeof(char) * (end - start + 2)))) //+2 porque al restar queda 1 hueco y un '\0'.
 		return (NULL);
 	i = start;
 	o = 0;
@@ -98,13 +98,12 @@ char			*ft_strtrim(char const *s1, char const *set)
 		trimmed[0] = '\0';
 		return (trimmed);
 	}
-	start = set_start(s1, set);
-	end = set_end(s1, set, start);
+	start = set_start(s1, set); //Devuelve el valor en el que termina el set al principio.
+	end = set_end(s1, set, start); //Devuelve el valor en el que termina el set al final.
 	trimmed = trim(s1, start, end);
 	return (trimmed);
 }
 
-int main()
-{
-	free(ft_strtrim("",""));
-}
+//Reserva memoria con malloc para la string que va a devolver, que es una copia de la string pasada
+//como argumento, sin los caracteres indicados en el set pasado como
+//argumento al principio y al final de la cadena de caracteres.

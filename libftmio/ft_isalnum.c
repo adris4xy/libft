@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:53:07 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/11 15:09:11 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 11:00:35 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,4 @@ int	ft_isalnum(int c)
 	}
 	return (0);
 }
+//Returna 1 si es una letra o numero.

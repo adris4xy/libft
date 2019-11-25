@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 15:07:58 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/14 18:17:05 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 13:54:56 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,6 @@ int		ft_lstsize(t_list *lst)
 		i++;
 	return (i);
 }
+//Cuenta el número de elementos de la lista.
+//*lst 	  ->  Principio de la lista.
+//Retorno -> Tamaño de la lista.

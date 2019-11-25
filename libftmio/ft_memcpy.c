@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 10:11:39 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/11 14:50:59 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 15:22:48 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,4 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	else
 		return (NULL);
 }
+//Copia 'n' bytes de src a dst. Devuelve el valor de dst.

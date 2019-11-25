@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 15:17:23 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/11 15:10:50 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 16:45:23 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,4 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
+//Devuelve el 'caracter si es un caracter ASCII y letra minuscula.

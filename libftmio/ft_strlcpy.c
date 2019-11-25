@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 11:01:07 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/11 12:15:37 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 16:41:26 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[a] = '\0';
 	return (ft_strlen(src));
 }
+//Copia strings, toman el tamaño completo de dst y garantiza la terminacion con NULL.
+//Devuelve el tamaño de la string que se quiere copiar mas el '\0'.

@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 10:26:03 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/07 16:53:15 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 17:20:22 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	else
 		return (s1u[i] - s2u[i]);
 }
+//Compara s1 y s2 hasta 'n' caracteres. Devuelve 0 si son iguales o la diferencia en el caracter diferente.

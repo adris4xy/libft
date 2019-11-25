@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 12:48:55 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/11 15:03:56 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 15:24:28 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (NULL);
 }
+//Copia 'len' bytes de string src a string dst. Las dos cadenas pueden superponerse.
+//La copia es siempre hecho de una manera no destructiva. Devuelve el valor de dst.

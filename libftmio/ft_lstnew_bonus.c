@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 14:05:35 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/14 18:15:47 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 13:48:40 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,10 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
+//Reserva memoria con malloc para un nuevo elemento que devuelve.
+//La variable content se inicializa mediante el valor del parámetro content.
+//La variable next se inicializa con NULL.
+
+//void *content -> El contenido del nuevo elemento.
+
+//Retorno -> El elemento nuevo (new).

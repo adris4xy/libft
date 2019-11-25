@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 15:54:35 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/08 17:55:24 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 17:22:38 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,4 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)&s[i - (j - 1)]);
 	return (NULL);
 }
+//Localiza la ultima aparicion del caracter 'c' en el string 's'. Devuelve un puntero al caracter 'c'.

@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 13:58:41 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/20 17:58:00 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 15:50:13 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int		ft_countwords(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 	}
-	return (words);
+	return (words); //Cuenta las palabras que hay.
 }
 
 static int		size_nextword(char const *s, char c, int i)
@@ -47,7 +47,7 @@ static int		size_nextword(char const *s, char c, int i)
 		counter++;
 		i++;
 	}
-	return (counter);
+	return (counter); //Cuenta el tamaño de las palabras.
 }
 
 static int		save_word(char *str, char const *s, char c, int i)
@@ -69,7 +69,7 @@ static int		save_word(char *str, char const *s, char c, int i)
 		i++;
 	}
 	str[j] = '\0';
-	return (i);
+	return (i); //Sirve para pasar de una palabra a otra, siendo 'i' la posicion donde terminan las palabras.
 }
 
 static char		**ft_split2(char const *s, char c, int max)
@@ -79,15 +79,15 @@ static char		**ft_split2(char const *s, char c, int max)
 	int		i;
 
 	i = ft_countwords(s, c);
-	if (!(tab = (char **)malloc(sizeof(char *) * (i + 1))))
+	if (!(tab = (char **)malloc(sizeof(char *) * (i + 1)))) //Malloc para crear tabla.
 		return (NULL);
 	tab[i] = NULL;
-	max = i;
+	max = i; //Max se queda con el numero de palabras.
 	i = 0;
 	j = 0;
 	while (j < max)
 	{
-		if (!(tab[j] = malloc(sizeof(char) * (size_nextword(s, c, i) + 1))))
+		if (!(tab[j] = malloc(sizeof(char) * (size_nextword(s, c, i) + 1)))) //Crea los strings de la tabla.
 			return (NULL);
 		i = save_word(tab[j], s, c, i);
 		j++;
@@ -104,3 +104,7 @@ char			**ft_split(char const *s, char c)
 	max = 0;
 	return (ft_split2(s, c, max));
 }
+
+//Reserva memoria con malloc para la tabla de strings que va a devolver, 
+//obtenida separando 's' con el carácter 'c', que se utiliza como delimitador. 
+//La tabla debe terminar con NULL.

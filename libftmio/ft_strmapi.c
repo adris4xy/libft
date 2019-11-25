@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 11:16:17 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/20 18:09:24 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 16:44:28 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,6 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (str);
 }
+//Aplica la función 'f' a cada carácter de la de string pasada como argumento
+//para crear una nueva string con malloc que resulte de las aplicaciones sucesivas de f.
+//Devuelve la string que resulte de las aplicaciones sucesivas de 'f'. NULL si falla la asignación.

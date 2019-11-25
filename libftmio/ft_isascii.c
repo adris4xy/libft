@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 15:02:49 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/11 15:09:33 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 11:02:01 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,4 @@ int	ft_isascii(int c)
 	}
 	return (0);
 }
+//Returna 1 si el caracter es de la tabla ASCII.

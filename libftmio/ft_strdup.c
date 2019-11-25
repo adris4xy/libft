@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 17:35:13 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/08 11:10:16 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 16:00:01 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,5 @@ char	*ft_strdup(const char *s1)
 	s2[i] = '\0';
 	return (s2);
 }
+//Asigna suficiente memoria en s2 para una copia de la cadena s1, hace la copia y devuelve un puntero a s2.
+//El puntero del malloc creado de s2 puede utilizarse posteriormente como argumento para la función free.

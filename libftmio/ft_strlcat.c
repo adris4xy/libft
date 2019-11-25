@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 11:31:35 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/07 16:47:21 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 16:39:58 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[len] = '\0';
 	return (i + ft_strlen(src));
 }
+//concatena strings, toman el tamaño completo de dst y garantiza la terminacion con NULL.
+//Agragara como maximo dstsize - strlen(dst) - 1 caracteres, luego termina en NULL.
+//Devuelve el tamaño de las dos strings concatenadas mas el '\0'.

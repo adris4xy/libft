@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 12:21:09 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/19 17:22:02 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 15:33:15 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,4 @@ void	ft_putnbr_fd(int n, int fd)
 	toprint = (av % 10) + 48;
 	write(fd, &toprint, 1);
 }
+//Escribe el int 'n' sobre el 'file descriptor' proporcionado.

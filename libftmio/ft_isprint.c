@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 15:08:06 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/11 15:10:21 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 11:02:58 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,4 @@ int	ft_isprint(int c)
 	}
 	return (0);
 }
+//Returna 1 si es un caracter  imprimible de la tabla ASCII.

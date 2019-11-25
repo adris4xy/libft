@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 11:13:06 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/20 17:55:21 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 16:03:36 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	conclen = ft_strlen(s1) + ft_strlen(s2) + 1;
+	conclen = ft_strlen(s1) + ft_strlen(s2) + 1; //El +1 es el '\0'.
 	if (!(conc = malloc(sizeof(char) * conclen)))
 		return (NULL);
 	i = -1;
@@ -33,3 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	conc[i] = '\0';
 	return (conc);
 }
+//Reserva memoria con malloc para la string que va a devolver, y que resulta de la concatenación de s1 y s2.
+//*s1 -> La cadena de caracteres prefijo.
+//*s2 -> La cadena de caracteres sufijo.
+//Devuelve conc(La nueva cadena de caracteres) o NULL si falla la reserva de memoria.

@@ -6,7 +6,7 @@
 /*   By: aortega- <aortega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 16:04:01 by aortega-          #+#    #+#             */
-/*   Updated: 2019/11/12 18:10:43 by aortega-         ###   ########.fr       */
+/*   Updated: 2019/11/25 10:54:06 by aortega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,4 @@ int	ft_atoi(const char *str)
 		nbr = (nbr * 10) + (str[i++] - '0');
 	return (nbr * sign);
 }
+//Convierte un char string en numero entero(long int)
